@@ -1,0 +1,13 @@
+--cpu Cortex-M3
+"..\startup_stm32f10x_hd.o"
+"..\test.o"
+"..\delay.o"
+"..\sys.o"
+"..\oled.o"
+"..\uart5.o"
+"..\g3mm.o"
+"..\malloc.o"
+--strict --scatter "..\GM3.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\GM3.map" -o ..\GM3.axf
